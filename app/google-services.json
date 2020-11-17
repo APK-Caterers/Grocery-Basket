@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836351189467",
+    "firebase_url": "https://grocery-basket-96560.firebaseio.com",
+    "project_id": "grocery-basket-96560",
+    "storage_bucket": "grocery-basket-96560.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836351189467:android:373b237cb4e1e6c16587fe",
+        "android_client_info": {
+          "package_name": "com.google.codelabs.mdc.java.shrine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836351189467-93ddb4blsoinh4utjbqsr2god5nel7nh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdqAZcb_gMUb7cPuifYQlU52nZ8zXiLXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836351189467-93ddb4blsoinh4utjbqsr2god5nel7nh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
