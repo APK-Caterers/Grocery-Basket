@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/loginPageBackgroundColor"
-    tools:context=".LoginFragment">
+    android:background="@color/loginPageBackgroundColor">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +21,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/shr_logo" />
+            app:srcCompat="@drawable/shr_logo"
+            android:contentDescription="@string/app_logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,6 +39,7 @@
             android:hint="@string/shr_hint_username">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -68,11 +68,11 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/cancel_button"
+                android:id="@+id/reset_button"
                 style="@style/Widget.Shrine.Button.TextButton"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/shr_button_cancel"
+                android:text="@string/reset"
                 android:layout_width="wrap_content" />
 
             <com.google.android.material.button.MaterialButton
@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/google_sign_in"
-                android:text="Sign out from Google"
+                android:text="@string/sign_out_from_google"
                 android:layout_centerHorizontal="true"/>
 
         </RelativeLayout>
