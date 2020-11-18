@@ -10,7 +10,11 @@
     <string name="shr_product_title">Name</string>
     <string name="shr_product_description">Price</string>
     <string name="shr_account_label">My Account</string>
+    <string name="option2">Notifications</string>
+    <string name="option3">Offer-Zone</string>
+    <string name="option4">Purchase History</string>
     <string name="app_logo">App logo</string>
+    <string name="option1">My Cart</string>
     <string name="reset">Reset</string>
     <string name="sign_out_from_google">Sign out from Google</string>
     <string name="faq_and_review">FAQ and Review</string>
