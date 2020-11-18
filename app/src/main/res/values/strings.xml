@@ -21,4 +21,7 @@
     <string name="shr_account_label">My Account</string>
     <string name="button_text">Add to Cart</string>
     <string name="button_text2">Add to Cart</string>
+    <string name="app_logo">App logo</string>
+    <string name="reset">Reset</string>
+    <string name="sign_out_from_google">Sign out from Google</string>
 </resources>

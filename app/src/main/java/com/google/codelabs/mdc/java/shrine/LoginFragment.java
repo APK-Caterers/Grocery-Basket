@@ -99,22 +99,11 @@ public class LoginFragment extends Fragment {
 
 
 
+        final TextInputEditText username = view.findViewById(R.id.username);
         final TextInputLayout passwordTextInput = view.findViewById(R.id.password_text_input);
         final TextInputEditText passwordEditText = view.findViewById(R.id.password_edit_text);
         MaterialButton nextButton = view.findViewById(R.id.next_button);
-
-        // Set an error if the password is less than 8 characters.
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!isPasswordValid(passwordEditText.getText())) {
-                    passwordTextInput.setError(getString(R.string.shr_error_password));
-                } else {
-                    passwordTextInput.setError(null); // Clear the error
-                    ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false); // Navigate to the next Fragment
-                }
-            }
-        });
+        MaterialButton resetButton = view.findViewById(R.id.reset_button);
 
         // Clear the error once more than 8 characters are typed.
         passwordEditText.setOnKeyListener(new View.OnKeyListener() {
@@ -124,6 +113,29 @@ public class LoginFragment extends Fragment {
                     passwordTextInput.setError(null); //Clear the error
                 }
                 return false;
+            }
+        });
+
+        // Set an error if the password is less than 8 characters.
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!isPasswordValid(passwordEditText.getText())) {
+                    passwordTextInput.setError(getString(R.string.shr_error_password));
+                } else {
+                    passwordTextInput.setError(null); // Clear the error
+                    ((NavigationHost) getActivity()).navigateTo(new LoginTypeFragment(), false); // Navigate to the next Fragment
+                }
+            }
+        });
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                username.setText(null);
+                passwordEditText.setText(null);
+                passwordTextInput.setError(null);
+                username.requestFocus();
             }
         });
         return view;
