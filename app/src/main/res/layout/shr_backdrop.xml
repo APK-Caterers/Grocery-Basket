@@ -2,46 +2,39 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_1"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shr_featured_label" />
+        android:text="Option-1" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_2"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shr_apartment_label" />
+        android:text="Option-2" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_3"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shr_accessories_label" />
+        android:text="Option-3" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_4"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shr_shoes_label" />
+        android:text="Option-4" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_5"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shr_tops_label" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.Shrine.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/shr_bottoms_label" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.Shrine.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/shr_dresses_label" />
+        android:text="@string/faq_and_review" />
 
     <View
         android:layout_width="56dp"
@@ -50,6 +43,7 @@
         android:background="?android:attr/textColorPrimary" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/backdrop_button_6"
         style="@style/Widget.Shrine.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

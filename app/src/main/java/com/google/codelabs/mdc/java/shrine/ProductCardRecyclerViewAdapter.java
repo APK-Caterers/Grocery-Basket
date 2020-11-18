@@ -40,7 +40,7 @@ public class ProductCardRecyclerViewAdapter extends RecyclerView.Adapter<Product
             ProductEntry product = productList.get(position);
             holder.productTitle.setText(product.title);
             holder.productPrice.setText(product.price);
-            holder.AddToCart.setText(R.string.button_text2);
+            holder.AddToCart.setText(R.string.add_to_cart);
             imageRequester.setImageFromUrl(holder.productImage, product.url);
         }
     }
