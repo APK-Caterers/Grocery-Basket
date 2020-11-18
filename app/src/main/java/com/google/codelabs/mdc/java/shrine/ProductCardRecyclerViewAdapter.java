@@ -54,7 +54,7 @@ public class ProductCardRecyclerViewAdapter extends RecyclerView.Adapter<Product
                     Log.d(TAG,"Document has been saved");
                     holder.productTitle.setText(documentSnapshot.getString("title"));
                     holder.productPrice.setText(documentSnapshot.getString("Price"));
-                    holder.AddToCart.setText(R.string.button_text2);
+                    holder.AddToCart.setText(R.string.add_to_cart);
                     imageRequester.setImageFromUrl(holder.productImage, documentSnapshot.getString("url"));
                 }
             }

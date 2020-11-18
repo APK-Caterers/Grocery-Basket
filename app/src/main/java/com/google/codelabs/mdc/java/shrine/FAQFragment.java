@@ -2,17 +2,12 @@ package com.google.codelabs.mdc.java.shrine;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -76,9 +71,6 @@ public class FAQFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
 
-        // Set up the toolbar
-        setUpToolbar(view);
-
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("reviews");
@@ -105,26 +97,5 @@ public class FAQFragment extends Fragment {
 
 
         return view;
-    }
-
-    private void setUpToolbar(View view) {
-        Toolbar toolbar = view.findViewById(R.id.app_bar);
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
-        if (activity != null) {
-            activity.setSupportActionBar(toolbar);
-        }
-        toolbar.setNavigationOnClickListener(new NavigationIconClickListener(
-                getContext(),
-                view.findViewById(R.id.product_grid),
-                new AccelerateDecelerateInterpolator(),
-                getContext().getResources().getDrawable(R.drawable.shr_branded_menu), // Menu open icon
-                getContext().getResources().getDrawable(R.drawable.shr_close_menu))); // Menu close icon
-
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
-        menuInflater.inflate(R.menu.shr_toolbar_menu, menu);
-        super.onCreateOptionsMenu(menu, menuInflater);
     }
 }
