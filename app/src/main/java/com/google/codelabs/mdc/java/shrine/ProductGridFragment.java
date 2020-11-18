@@ -40,7 +40,7 @@ public class ProductGridFragment extends Fragment {
         // Set up the RecyclerView
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 4, GridLayoutManager.VERTICAL, false);
         /*gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
