@@ -22,7 +22,8 @@ import com.google.codelabs.mdc.java.shrine.staggeredgridlayout.StaggeredProductC
 
 public class ProductGridFragment extends Fragment {
 
-    MaterialButton backdrop_button_5;
+    MaterialButton backdrop_button_5,backdrop_button_4,backdrop_button_3,backdrop_button_2,
+            backdrop_button_1,backdrop_button_6;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,12 +59,57 @@ public class ProductGridFragment extends Fragment {
         int smallPadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing_small);
         recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
 
+        backdrop_button_1 = view.findViewById(R.id.backdrop_button_1);
+        backdrop_button_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                ((NavigationHost) getActivity()).navigateTo(new mycartFragment(), false);
+            }
+        });
+
+        backdrop_button_2 = view.findViewById(R.id.backdrop_button_2);
+        backdrop_button_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                ((NavigationHost) getActivity()).navigateTo(new notificationsfragment(), false);
+            }
+        });
+
+        backdrop_button_3 = view.findViewById(R.id.backdrop_button_3);
+        backdrop_button_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                ((NavigationHost) getActivity()).navigateTo(new offerzonefragment(), false);
+            }
+        });
+
+        backdrop_button_4 = view.findViewById(R.id.backdrop_button_4);
+        backdrop_button_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                ((NavigationHost) getActivity()).navigateTo(new PurchaseHistoryFragment(), false);
+            }
+        });
+
         backdrop_button_5 = view.findViewById(R.id.backdrop_button_5);
         backdrop_button_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
                 ((NavigationHost) getActivity()).navigateTo(new FAQFragment(), false);
+            }
+        });
+
+        backdrop_button_6 = view.findViewById(R.id.backdrop_button_6);
+        backdrop_button_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
+                ((NavigationHost) getActivity()).navigateTo(new MyAccountFragment(), false);
             }
         });
 
