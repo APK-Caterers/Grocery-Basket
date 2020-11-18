@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".offerzonefragment">
+    tools:context=".mycartFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="266dp"
+        android:layout_height="384dp"
+        android:layout_margin="50dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="A customer will be able to view the offers available to him over here"
+        android:textSize="24sp" />
 
 </FrameLayout>

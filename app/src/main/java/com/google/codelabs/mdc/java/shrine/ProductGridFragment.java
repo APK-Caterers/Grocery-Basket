@@ -64,7 +64,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new mycartFragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new mycartFragment(), true);
             }
         });
 
@@ -73,7 +73,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new notificationsfragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new notificationsfragment(), true);
             }
         });
 
@@ -82,7 +82,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new offerzonefragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new offerzonefragment(), true);
             }
         });
 
@@ -91,7 +91,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new PurchaseHistoryFragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new PurchaseHistoryFragment(), true);
             }
         });
 
@@ -100,7 +100,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new FAQFragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new FAQFragment(), true);
             }
         });
 
@@ -109,7 +109,7 @@ public class ProductGridFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(getContext(), "Yo", Toast.LENGTH_SHORT).show();
-                ((NavigationHost) getActivity()).navigateTo(new MyAccountFragment(), false);
+                ((NavigationHost) getActivity()).navigateTo(new MyAccountFragment(), true);
             }
         });
 
