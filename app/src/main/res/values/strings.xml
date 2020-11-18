@@ -7,8 +7,8 @@
     <string name="shr_error_password">Password must contain at least 8 characters.</string>
     <string name="shr_filter_title">Filter</string>
     <string name="shr_search_title">Search</string>
-    <string name="shr_product_title">Title</string>
-    <string name="shr_product_description">Secondary text</string>
+    <string name="shr_product_title">Name</string>
+    <string name="shr_product_description">Price</string>
 
     <!-- Shrine backdrop menu labels -->
     <string name="shr_featured_label">Featured</string>
@@ -19,4 +19,6 @@
     <string name="shr_bottoms_label">Bottoms</string>
     <string name="shr_dresses_label">Dresses</string>
     <string name="shr_account_label">My Account</string>
+    <string name="button_text">Add to Cart</string>
+    <string name="button_text2">Add to Cart</string>
 </resources>
