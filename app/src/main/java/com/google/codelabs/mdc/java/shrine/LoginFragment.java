@@ -14,7 +14,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.Api;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,6 +29,8 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Fragment representing the login screen for Shrine.
@@ -184,6 +185,7 @@ public class LoginFragment extends Fragment {
         GoogleSignInAccount acc = GoogleSignIn.getLastSignedInAccount(getContext());
         if(acc!=null) {
             Toast.makeText(getContext(), acc.getEmail(), Toast.LENGTH_LONG).show();
+            ((NavigationHost) getActivity()).navigateTo(new LoginTypeFragment(), false);
         }
     }
 }
