@@ -1,21 +1,20 @@
 package com.google.codelabs.mdc.java.shrine;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import static android.content.ContentValues.TAG;
 
 /**
@@ -24,6 +23,12 @@ import static android.content.ContentValues.TAG;
  * create an instance of this fragment.
  */
 public class FAQFragment extends Fragment {
+
+    MaterialButton submitReview;
+    EditText name;
+    EditText orderNo;
+    EditText review;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -69,32 +74,22 @@ public class FAQFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
+        final View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("reviews");
-        final String orderNo = "106";
-        Review obj = new Review("#106", "Customer_0017", "Great serviiice..!");
-        myRef.child(orderNo).setValue(obj);
-
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
+        submitReview = view.findViewById(R.id.submit_review);
+        submitReview.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.child(orderNo).child("name").getValue().toString();
-                Toast.makeText(getContext(), "Value is:" + value, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Toast.makeText(getContext(), "Failed to read value.", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("reviews");
+                name = view.findViewById(R.id.name);
+                orderNo = view.findViewById(R.id.orderNo);
+                review = view.findViewById(R.id.review);
+                Review obj = new Review(orderNo.getText().toString(), name.getText().toString(), review.getText().toString());
+                myRef.child(orderNo.getText().toString()).setValue(obj);
+                Toast.makeText(getContext(), "Review submitted for order no.: " + orderNo.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
-
 
         return view;
     }
