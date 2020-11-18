@@ -13,14 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import com.google.codelabs.mdc.java.shrine.network.ProductEntry;
+import com.google.codelabs.mdc.java.shrine.staggeredgridlayout.StaggeredProductCardRecyclerViewAdapter;
 
 public class ProductGridFragment extends Fragment {
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
+
 
     @Override
     public View onCreateView(
@@ -52,6 +56,7 @@ public class ProductGridFragment extends Fragment {
         return view;
     }
 
+
     private void setUpToolbar(View view) {
         Toolbar toolbar = view.findViewById(R.id.app_bar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
@@ -66,6 +71,7 @@ public class ProductGridFragment extends Fragment {
                 getContext().getResources().getDrawable(R.drawable.shr_close_menu))); // Menu close icon
 
     }
+
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
