@@ -43,6 +43,12 @@
                 android:text="@string/shr_product_description"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_text" />
         </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

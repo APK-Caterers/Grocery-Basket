@@ -33,12 +33,14 @@ public class ProductCardRecyclerViewAdapter extends RecyclerView.Adapter<Product
         return new ProductCardViewHolder(layoutView);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull ProductCardViewHolder holder, int position) {
         if (productList != null && position < productList.size()) {
             ProductEntry product = productList.get(position);
             holder.productTitle.setText(product.title);
             holder.productPrice.setText(product.price);
+            holder.AddToCart.setText(R.string.button_text2);
             imageRequester.setImageFromUrl(holder.productImage, product.url);
         }
     }
