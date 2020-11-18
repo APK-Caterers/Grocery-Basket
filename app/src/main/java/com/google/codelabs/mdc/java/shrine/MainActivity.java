@@ -1,9 +1,21 @@
 package com.google.codelabs.mdc.java.shrine;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
 
@@ -18,6 +30,26 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .add(R.id.container, new LoginFragment())
                     .commit();
         }
+
+        //Snippet to store data in Cloud Firestore
+        /* DocumentReference mDocRef = FirebaseFirestore.getInstance().collection("Sampledata").document("Inspiration");
+        Map<String, Object> dataTosave = new HashMap<String, Object>();
+        final String TAG = "MyActivity";
+        dataTosave.put("Adithas","dkdjd");
+        dataTosave.put("dkdkd","dkjdkd");
+        mDocRef.set(dataTosave).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d(TAG,"Document has been saved");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.w(TAG,"Document was not saved",e);
+            }
+        });*/
+
+
     }
 
     /**
@@ -39,4 +71,5 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
 
         transaction.commit();
     }
+
 }
